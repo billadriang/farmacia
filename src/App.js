@@ -12,7 +12,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://github.com/billadriang"
+          href="https://github.com/billadriang/farmacia"
           target="_blank"
           rel="noopener noreferrer"
         >
