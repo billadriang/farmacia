@@ -1,6 +1,8 @@
 import React from "react";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+// Importando imagen de carrito de componente 
+import CartWidget from "./CartWidget";
 
+// NAVBAR
 function NavBar() {
     return (
         <div style={styles.container}>
@@ -11,7 +13,8 @@ function NavBar() {
                 <a style={styles.anclas} href="google.com"> Acerca de nosotros </a>
                 <a style={styles.anclas} href="google.com"> Contacto </a>
             </nav>
-            <ShoppingCartIcon/>
+                {/* Implementando el cartwidget */}
+                {CartWidget()}
         </div>
 
     );
@@ -19,6 +22,7 @@ function NavBar() {
 
 export default NavBar
 
+// Estilos del Navbar
 const styles = {
     container: {
         display: 'flex',
