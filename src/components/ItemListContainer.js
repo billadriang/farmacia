@@ -1,10 +1,16 @@
 import React from "react";
-const greeting = ['Hola Joven','Hello','Bienvenido']
-function ItemListContainer() {
-    return(
-        <div>{greeting[0]}</div>
+import ItemCount from "./ItemCount";
+
+const ItemListContainer = ({saludo, nombre, apellido, edad}) => {
+    return (
+    <>
+    <h3>{saludo}</h3>
+    <p>Mi nombre es {nombre} {apellido} y tengo {edad} años </p>
+    {/*Stock hardcoded*/}
+
+    <ItemCount stock={7}/>
+    </>
     )
 }
-console.log(greeting)
 
 export default ItemListContainer;

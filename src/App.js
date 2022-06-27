@@ -6,8 +6,13 @@ import NavBar from './components/NavBar';
 const App = () => {
   return(
     <>
-    <NavBar/>,
-    <ItemListContainer/>
+    <NavBar/>
+    <ItemListContainer 
+    saludo = 'Saludo a traves de props'
+    nombre='Bill'
+    apellido='Gaize'
+    edad= {25}
+    />
     </>
   );
 }
