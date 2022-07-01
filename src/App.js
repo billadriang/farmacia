@@ -7,12 +7,7 @@ const App = () => {
   return(
     <>
     <NavBar/>
-    <ItemListContainer 
-    saludo = 'Saludo a traves de props'
-    nombre='Bill'
-    apellido='Gaize'
-    edad= {25}
-    />
+    <ItemListContainer/>
     </>
   );
 }

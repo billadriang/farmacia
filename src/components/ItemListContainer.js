@@ -1,16 +1,15 @@
 import React from "react";
 import ItemCount from "./ItemCount";
 
-const ItemListContainer = ({saludo, nombre, apellido, edad}) => {
-    return (
+const ItemListContainer = () => {
+  const onAdd = (cuenta) => {
+    alert(`Gracias por comprar ${cuenta} Items`);
+  };
+  return (
     <>
-    <h3>{saludo}</h3>
-    <p>Mi nombre es {nombre} {apellido} y tengo {edad} años </p>
-    {/*Stock hardcoded*/}
-
-    <ItemCount stock={7}/>
+      <ItemCount initial={1} stock={7} onAdd={onAdd} />
     </>
-    )
-}
+  );
+};
 
 export default ItemListContainer;
