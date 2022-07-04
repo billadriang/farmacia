@@ -1,5 +1,7 @@
 import React from "react";
+// import { useEffect } from "react";
 import ItemCount from "./ItemCount";
+import ProductList from "./ItemList";
 
 const ItemListContainer = () => {
   const onAdd = (cuenta) => {
@@ -8,6 +10,7 @@ const ItemListContainer = () => {
   return (
     <>
       <ItemCount initial={1} stock={7} onAdd={onAdd} />
+      <ProductList />
     </>
   );
 };
