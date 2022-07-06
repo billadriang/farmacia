@@ -4,3 +4,5 @@ Agregado el navbar
 Agregado el cartwidget
 
 agregado texto provisional a travez de itemlistcontainer.js
+
+agregados archivos itemlist e itemlist container
