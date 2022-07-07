@@ -8,6 +8,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
 
 // PARA BILL DEL FaceRetouchingNaturalOutlined, CREA UN ARRAY DE PRODUCTOS, YA LUEGO CONSUMIRAS ESTO DE UNA DB
 const initialProducts = [
@@ -61,23 +62,17 @@ const ProductList = () => {
     <>
       <Item />
       {/* DEBES CREAR UN MAP PARA MOSTRAR EL AARAY YA QUE EN JSX NO SE MUESTRAN SINO SON EXPRESIONES, Y EL MAP HACE UNA COPIA */}
-      {initialProducts.map((product, id) => (
-        <>
-          {/* <h2 key={product.id}> {product.title}</h2> */}
-          <Card sx={{ maxWidth: 345 }}>
+      <Grid container>
+        {initialProducts.map((product) => (
+          <Card key={product.id}>
             <CardMedia
               component="img"
               height="140"
               image={product.pictureUrl}
             />
             <CardContent>
-              <Typography
-                key={product.id}
-                gutterBottom
-                variant="h5"
-                component="div"
-              >
-                <h2 id={product.id}> {product.title}</h2>
+              <Typography gutterBottom variant="h5" component="div">
+                <h2> {product.title}</h2>
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 INSERTE PLACEHOLDER CREATIVO
@@ -88,9 +83,8 @@ const ProductList = () => {
               <Button size="small">Detalles</Button>
             </CardActions>
           </Card>
-          );
-        </>
-      ))}
+        ))}
+      </Grid>
     </>
   );
 };
