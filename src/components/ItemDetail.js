@@ -59,12 +59,12 @@ const ItemDetail = () => {
           <CardMedia
             component="img"
             height="auto"
-            maxWidth="100%"
+            maxwidth="100%"
             image={product.pictureUrl}
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
-              <p>{product.desc}</p>
+              {product.desc}
             </Typography>
           </CardContent>
           <CardActions>
