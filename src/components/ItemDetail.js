@@ -7,7 +7,7 @@
 //   </>;
 
 //   }
-
+import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -27,7 +27,8 @@ const initialProducts = [
     price: "200$",
     pictureUrl:
       "https://www.farmadireta.com.br/imagens-complete/1000x1000/paracetamol-750mg-com-20-comprimidos-717823c183.jpg",
-    desc: "El acetaminofeno se usa para aliviar el dolor leve o moderado de las cefaleas, dolores musculares, períodos menstruales, resfriados, y los dolores de garganta, , muelas, espalda, así como de las reacciones a las vacunas (inyecciones) y para reducir la fiebre. El acetaminofeno también se puede usar para aliviar el dolor de la osteoartritis (artritis causada por la ruptura del revestimiento de las articulaciones). El acetaminofeno pertenece a una clase de medicamentos llamados analgésicos y antipiréticos (reductores de la fiebre). Su acción consiste en cambiar la manera en que el cuerpo responde al dolor.",
+    desc:
+      "El acetaminofeno se usa para aliviar el dolor leve o moderado de las cefaleas, dolores musculares, períodos menstruales, resfriados, y los dolores de garganta, , muelas, espalda, así como de las reacciones a las vacunas (inyecciones) y para reducir la fiebre. El acetaminofeno también se puede usar para aliviar el dolor de la osteoartritis (artritis causada por la ruptura del revestimiento de las articulaciones). El acetaminofeno pertenece a una clase de medicamentos llamados analgésicos y antipiréticos (reductores de la fiebre). Su acción consiste en cambiar la manera en que el cuerpo responde al dolor.",
   },
 ];
 

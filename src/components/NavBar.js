@@ -2,22 +2,36 @@ import React from "react";
 // Importando imagen de carrito de componente 
 import CartWidget from "./CartWidget";
 import { MdOutlineLocalPharmacy } from "react-icons/md";
+import {Link, NavLink} from "react-router-dom"
 
 
 // NAVBAR
-function NavBar() {
+function NavBar () {
+
+    const categories = [
+        {name: "analgesicos", id:0, route: "categoria/analgesicos"},
+        {name: "antibioticos", id:1, route: "categoria/antibioticos"},
+        {name: "vitaminas", id:2, route: "categoria/vitaminas"},
+        {name: "recetario", id:3, route: "categoria/recetario"},
+    ];
+
+
+
     return (
         <div  style={styles.container}>
-            <h1><MdOutlineLocalPharmacy style={styles.logo}/>FARMACIA CENTRO MEDICO</h1>
-            
-            <nav style={styles.navStyle}>
-                <a style={styles.anclas} href="google.com"> Productos </a>
-                <a style={styles.anclas} href="google.com"> Servicios </a>
-                <a style={styles.anclas} href="google.com"> Acerca de nosotros </a>
-                <a style={styles.anclas} href="google.com"> Contacto </a>
 
+            <Link to="/"> <MdOutlineLocalPharmacy style={styles.logo} /></Link> <h3>FARMACIA CENTRO MEDICO </h3> 
+
+            <nav style={styles.navStyle}>
+                <Link style={styles.anclas} to="/Productos"> Productos </Link>
+                <Link style={styles.anclas} to="/Servicios"> Servicios </Link>
+                <Link style={styles.anclas} to="/Acerca"> Acerca de nosotros </Link>
+                <Link style={styles.anclas} to="/Contacto"> Contacto </Link>
+
+                {categories.map((categoria) => <Link key={categoria.id} to={categoria.route}>{categoria.name}</Link>)}
+                
             {/* Implementando el cartwidget */}
-            <button style={styles.boton} >{CartWidget()}</button>
+            <Link style={styles.boton} to="/carrito" >{CartWidget()}</Link>
             </nav>
 
         </div>
